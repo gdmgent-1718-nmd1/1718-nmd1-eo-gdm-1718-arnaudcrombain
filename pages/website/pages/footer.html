@@ -1,0 +1,49 @@
+
+<div id="formsubmitbutton">
+<input type="submit" name="submitter" style="margin-left:42%; background-color:transparent;" class="button"  value="Laad meer" onclick="ButtonClicked()">
+</div>
+<div id="buttonreplacement" style="margin-left:30px; display:none;">
+<img style="margin-left:48%;" src="http://www.willmaster.com/images/preload.gif" alt="loading...">
+</div>
+
+<script type="text/javascript">
+
+function ButtonClicked()
+{
+   document.getElementById("formsubmitbutton").style.display = "none"; // to undisplay
+   document.getElementById("buttonreplacement").style.display = ""; // to display
+   return true;
+}
+var FirstLoading = true;
+function RestoreSubmitButton()
+{
+   if( FirstLoading )
+   {
+      FirstLoading = false;
+      return;
+   }
+   document.getElementById("formsubmitbutton").style.display = ""; // to display
+   document.getElementById("buttonreplacement").style.display = "none"; // to undisplay
+}
+
+document.onfocus = RestoreSubmitButton;
+</script>
+
+</section>
+
+                   
+				
+					<footer id="footer">
+                    
+                    <figure>
+                   <a target="_blank" href="https://www.facebook.com/mimbrussels"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                   <a target="_blank" href="https://twitter.com/mimbrussels"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                   <a target="_blank" href="https://www.instagram.com/explore/tags/muziekinstrumentenmuseum/?hl=nl"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                   </figure>
+                    
+					<p class="copyright">&copy; Copyright Arnaud Crombain.</p>
+					</footer>
+			</div>
+            </main>
+	</body>
+</html>

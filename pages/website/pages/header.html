@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MiM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../css/stijl.css" />
+        <link rel="shortcut icon" href="../brand/logo.png">
+        <link href="https://use.fontawesome.com/1479b29e9d.css" media="all" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="../js/index.js"></script>
+        
+	</head>
+	<body>
+    <main>
+   
+    	
+        <nav>
+        	<div id="container">
+            <a href="../index.php"><img id="logo" src="../images/logo.png" alt="logo"></a>
+   			<ul id="ul-nav">
+            	
+        		<li><a class="active" href="activiteiten.php">Activiteiten</a></li>
+				<li><a href="museum.html">Museum</a></li>
+                <li><a href="contact.php#header">Contact</a></li>
+       		<audio style="display:none;" id="beep-two" controls preload="auto">
+				<source src="../sounds/beep.mp3" controls></source>
+				<source src="../sounds/beep.ogg" controls></source>
+			</audio>
+            
+       		</ul>
+        	</div>
+        </nav>
+        
+        <script>
+		$("#ul-nav a")
+  .each(function(i) {
+    if (i != 0) { 
+      $("#beep-two")
+        .clone()
+        .attr("id", "beep-two" + i)
+        .appendTo($(this).parent()); 
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep-two" + $(this).data("beeper"))[0].play();
+  });
+$("#beep-two").attr("id", "beep-two0");
+</script>
+        
+			<header id="header" class="banner">
+				<div>
+					<h1>Muziekinstrumentenmuseum</h1>
+					<p>"Dat klinkt zoals muziek in mijn oren"</p>
+                     <section id="section05" class="demo">
+				<a href=""><span></span></a>
+				</section>
+				</div>
+			</header>
+
+			<div id="container">
+            
+            		<h2 style="text-align:center; margin-top:-15px;"> Evenementen om naar uit te kijken</h2>
+                  	<section style="background-color:#FFFFFF; height:1200px;" >  
